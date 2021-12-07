@@ -18,14 +18,18 @@ while letcount <= num_letters - 1:
     letter = (random.choice(letters))
     letcount += 1
     password.append(letter)
-print(password)
+
 while numcount <= num_numbers - 1:
     number = (random.choice(numbers))
     numcount += 1
     password.append(number)
-print(password)
+
 while symcount <= num_symbols - 1:
     symbol = (random.choice(symbols))
     symcount += 1
     password.append(symbol)
-print(password)
+
+shuff_pass = random.shuffle(password)
+for i in password:
+    new_pass = ' '.join(map(str, password))
+print(new_pass)
